@@ -21,7 +21,6 @@ const isLoggedIn = () => {
           <div class="input">
   <i class="bi bi-search"></i>
   <input type="text" name="pesquisa" placeholder="Search movies" id="search-input" />
-  <button id="search-button">Search</button>
 </div>
 
           <div class="header-right">
