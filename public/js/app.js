@@ -152,7 +152,8 @@ const fetchPosters = () => {
 
 // ==================== Opção de deletar o usuário do sistema =================
 
-document.getElementById('deleteButton').addEventListener('click', () => {
+document.addEventListener("DOMContentLoaded", () =>{
+  document.getElementById('deleteButton').addEventListener('click', () => {
   fetch('/delete/user', {
     method: 'delete',
     credentials: 'include',
@@ -170,6 +171,8 @@ document.getElementById('deleteButton').addEventListener('click', () => {
       console.log('Ocorreu um erro ao tentar deletar o usuário.');
     });
 });
+}
+
 
 
 // ===================== PESQUISA DE FILMES =====================
