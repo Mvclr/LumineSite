@@ -150,31 +150,6 @@ const fetchPosters = () => {
     .catch(error => console.error('Erro ao carregar posters:', error));
 };
 
-// ==================== Opção de deletar o usuário do sistema =================
-
-const deleteButton = () =>{
-  document.getElementById('deleteButton').addEventListener('click', () => {
-  fetch('/delete/user', {
-    method: 'delete',
-    credentials: 'include',
-  })
-    .then(res => res.json())
-    .then(data => {
-      if (data.message) {
-        console.log(data.message);
-      } else if (data.error) {
-        console.log(data.error); 
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      console.log('Ocorreu um erro ao tentar deletar o usuário.');
-    });
-});
-}
-
-
-
 // ===================== PESQUISA DE FILMES =====================
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById('search-input');
@@ -240,7 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("DOMContentLoaded", () => {
   isLoggedIn();
   fetchPosters();
-  deleteButton()
 });
 
 
