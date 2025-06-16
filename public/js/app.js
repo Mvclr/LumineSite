@@ -153,8 +153,6 @@ const fetchPosters = () => {
 // ==================== Opção de deletar o usuário do sistema =================
 
 document.getElementById('deleteBtn').addEventListener('click', () => {
-  const confirmDelete = confirm('Tem certeza que deseja deletar seu usuário?');
-  if (!confirmDelete) return;
   fetch('/delete/user', {
     method: 'POST',
     credentials: 'include',
@@ -169,7 +167,7 @@ document.getElementById('deleteBtn').addEventListener('click', () => {
     })
     .catch(err => {
       console.error(err);
-      alert('Ocorreu um erro ao tentar deletar o usuário.');
+      console.log('Ocorreu um erro ao tentar deletar o usuário.');
     });
 });
 
