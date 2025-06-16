@@ -49,7 +49,7 @@ router.post("/cadastro", async (req, res) => {
         return res.status(500).json({ message: "Erro ao cadastrar usuário" });
       }
       console.log("User registered successfully:", results);
-      res.sendFile(path.join(__dirname, "../views", "login.html"));
+      res.sendFile(path.join(__dirname, "../docs", "login.html"));
     }
   );
 });
