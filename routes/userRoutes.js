@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 
 router.use(express.static(path.join(__dirname, "../public")));
 
-router.post('/delete/user', verifyJWTMiddleware,(req, res) =>{
+router.get('/delete/user', verifyJWTMiddleware,(req, res) =>{
     const username = req.cookies.username;
     
     connection.query(
