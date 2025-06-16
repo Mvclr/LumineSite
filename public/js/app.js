@@ -140,7 +140,7 @@ const fetchPosters = () => {
         posterElement.style.cursor = 'pointer';
         posterElement.innerHTML = `
          <a href="/movie/${poster.imdbID}">
-          <img src="${poster.getPoster_url()}" alt="${poster.title}" />
+          <img src="${poster.poster_url}" alt="${poster.title}" />
           <h3>${poster.title}</h3>
           </a>
         `;
