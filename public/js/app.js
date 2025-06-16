@@ -154,7 +154,7 @@ const fetchPosters = () => {
 
 document.getElementById('deleteButton').addEventListener('click', () => {
   fetch('/delete/user', {
-    method: 'POST',
+    method: 'delete',
     credentials: 'include',
   })
     .then(res => res.json())
