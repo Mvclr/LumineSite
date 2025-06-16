@@ -152,7 +152,7 @@ const fetchPosters = () => {
 
 // ==================== Opção de deletar o usuário do sistema =================
 
-document.getElementById('deleteBtn').addEventListener('click', () => {
+document.getElementById('deleteButton').addEventListener('click', () => {
   fetch('/delete/user', {
     method: 'POST',
     credentials: 'include',
