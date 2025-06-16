@@ -152,7 +152,7 @@ const fetchPosters = () => {
 
 // ==================== Opção de deletar o usuário do sistema =================
 
-document.addEventListener("DOMContentLoaded", () =>{
+const deleteButton = () =>{
   document.getElementById('deleteButton').addEventListener('click', () => {
   fetch('/delete/user', {
     method: 'delete',
@@ -240,6 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("DOMContentLoaded", () => {
   isLoggedIn();
   fetchPosters();
+  deleteButton()
 });
 
 
